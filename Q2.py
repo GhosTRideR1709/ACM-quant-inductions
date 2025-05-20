@@ -11,7 +11,7 @@ data = yf.download('NVDA',period='6mo',interval='1d')
 df = pd.DataFrame(data)
 
 
-# df['Daily_returns'] =(df['Close']-df['Close'].shift(1))/(df['Close'].shift(1))  #can do this
+
 df['Daily_returns'] = df['Close'].pct_change()
 df['Rolling_AVG_7'] = df['Daily_returns'].rolling(window=7).mean()
 df['Rolling_STD_7'] = df['Daily_returns'].rolling(window=7).std()

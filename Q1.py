@@ -70,7 +70,7 @@ for i in range(1,len(df['20_SMA'])-1):
 df['Dates'] = df['Dates'].map(lambda x:datetime.datetime.fromtimestamp(x))
 
 fig,ax = plt.subplots()
-#ax.plot(df['Dates'],df['Close'])
+#ax.plot(df['Dates'],df['Close'],color = 'black',label = 'Close price')
 ax.scatter(buy_date,buy_price,color = 'green',label = 'buy points')
 ax.scatter(sell_date,sell_price,color = 'red',label = 'sell points')
 ax.plot(df['Dates'],df['20_SMA'],color = 'yellow',label = '20sma')

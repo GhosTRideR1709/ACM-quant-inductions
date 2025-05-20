@@ -42,9 +42,9 @@ fig.autofmt_xdate()
 plt.xticks(rotation=45)
 plt.tight_layout()
 plt.legend()
-plt.show()
 
 print(df1['Total_portfolio value'].iloc[-1])
-print(df1['Close'].iloc[-1])
-print(df2['Close'].iloc[-1])
-print(df3['Close'].iloc[-1])
+
+plt.show()
+
+
